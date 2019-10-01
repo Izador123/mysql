@@ -1,0 +1,29 @@
+Создайте дамп базы данных example из предыдущего задания, разверните содержимое дампа в новую базу данных sample.
+
+
+Выполняем в консоли на убунте.
+
+п.4 делаем дамп
+п.5 загружаем дамп в базу sample 
+п.7 проверяем результат
+
+1. mysql
+2. create database sample;
+3. \q
+4. mysqldump example > example.sql ;
+5. mysql sample < example.sql;
+6. mysql
+7. select * from sample.users;
+
+
+
+
+mysqldump mysql.help_keyword --where='help_keyword_id<100';
+
+Задание 4
+(по желанию) Ознакомьтесь более подробно с документацией утилиты mysqldump. Создайте дамп единственной таблицы help_keyword базы данных mysql. Причем добейтесь того, чтобы дамп содержал только первые 100 строк таблицы.
+
+
+Выполняем в консоли на убунте.
+
+mysqldump mysql.help_keyword --where='help_keyword_id<100';
